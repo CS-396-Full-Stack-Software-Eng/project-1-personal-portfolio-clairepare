@@ -2,32 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Root definition for light mode with default black text on a gradient background from light gray to white */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 0, 0, 0; /* Black text by default */
+  --background-start-rgb: 214, 219, 220; /* Light gray start */
+  --background-end-rgb: 255, 255, 255; /* Pure white end */
 }
 
+/* Overrides for dark mode, typically with white text on a darker background */
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 255, 255, 255; /* White text for dark mode */
+    --background-start-rgb: 20, 20, 20; /* Dark gray start for a more typical dark mode */
+    --background-end-rgb: 40, 40, 40; /* Slightly lighter gray end */
   }
 }
 
+/* Applying the defined CSS variables to the body for color and background */
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    to bottom,
+    rgb(var(--background-start-rgb)), /* Ensures the gradient starts with a solid color */
+    rgb(var(--background-end-rgb))
+  );
 }
 
+/* Additional utility layer for common text styling */
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .text-overflow-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }

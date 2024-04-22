@@ -6,8 +6,8 @@ import ProjectTag from './ProjectTag'
 const projectsData = [
     {
         id: 1,
-        title: "Project 1",
-        description: "Project 1 Description",
+        title: "Wildcat Connect",
+        description: "Surveyed the campus community to highlight a need that students on campus actually face. Created Wildcat Connect which centralized event information for campus organizations, as there was no up-to-date hub where organizations can post and manage events for the community to see. Integrated GitHub for version control, enhancing team collaboration. Applied Vitest and Cypress for comprehensive testing, ensuring application reliability. Adopted continuous integration for improved development efficiency.",
         image: "/images/projects/1.png",
         tag: ["All", "Web"],
         gitUrl: "/",
@@ -15,8 +15,8 @@ const projectsData = [
     },
     {
         id: 2,
-        title: "Project 2",
-        description: "Project 2 Description",
+        title: "NU Campus Kitchen",
+        description: "A collaboration with NU Campus Kitchens, a group dedicated to reclaiming dining hall food waste and distributing to the Evanston community, on creating an app managing their internal database. NU Fridge was born, seamlessly tracking the inventory from each dining hall, variables like expiration and quantity, and notifying which food to package next. Provided dynamic analytics related to pounds of food, meals served, and other preferred metrics.",
         image: "/images/projects/2.png",
         tag: ["All", "Web"],
         gitUrl: "/",
@@ -24,8 +24,8 @@ const projectsData = [
     },
     {
         id: 3,
-        title: "Project 3",
-        description: "Project 3 Description",
+        title: "FitNU",
+        description: "Designed and implemented FitNU: an app designed to seamlessly connect the NU community with like-minded individuals who want to exercise together. Spearheaded full-stack development of campus applications using React, Node.js, and Firebase, focusing on enhancing campus engagement. Implemented Agile and Swarm methodologies for efficient 3-week sprint cycles Interchanged swarm cycles with comprehensive user testing, crafting detailed testing materials, task scenarios, and showing the app to gym-goers all around campus.",
         image: "/images/projects/3.png",
         tag: ["All", "Web"],
         gitUrl: "/",
@@ -33,8 +33,8 @@ const projectsData = [
     },
     {
         id: 4,
-        title: "Project 4",
-        description: "Project 4 Description",
+        title: "Bubbles: Smart Laundry Symbol Recognition",
+        description: "Bubbles is an innovative web application that streamlines the laundry process through advanced image recognition technology. Developed using React for a responsive front-end and powered by Firebase for real-time data handling and authentication, Bubbles offers a user-friendly interface that takes the guesswork out of laundry care. By leveraging state-of-the-art object detection algorithms, Bubbles identifies multiple laundry symbols in a single scan, decoding complex care instructions with ease. Users simply upload a photo of the care label on their garments, and the app provides a clear, concise summary of the washing, drying, ironing, and bleaching guidelines recommended by the manufacturer.",
         image: "/images/projects/4.png",
         tag: ["All", "Web"],
         gitUrl: "/",
@@ -61,7 +61,7 @@ const ProjectsSection = () => {
     const filteredProjects = projectsData.filter((project) => project.tag.includes(tag));
 
   return (
-    <div>
+    <section id="projects" className="py-6">
         <h2 className="text-center text-4xl font-bold text-white">
             My Projects
         </h2>
@@ -79,18 +79,20 @@ const ProjectsSection = () => {
                 name="Mobile" 
                 isSelected={tag === "Mobile"}/>
         </dib>
-        <div>
+        <div className="flex flex-wrap justify-center gap-4">
             {filteredProjects.map(
-            (project) => <ProjectCard 
-                            key={project.id} 
-                            title={project.title} 
-                            description={project.description} 
-                            imgUrl={project.image} 
-                            gitUrl={project.gitUrl} 
-                            previewUrl={project.previewUrl}/>
+            (project) => <div key={project.id} className="w-full xl:w-1/2 max-w-xs">
+                <ProjectCard
+                                key={project.id}
+                                title={project.title}
+                                description={project.description}
+                                imgUrl={project.image}
+                                gitUrl={project.gitUrl}
+                                previewUrl={project.previewUrl}/>
+            </div>
             )}
         </div>
-    </div>
+    </section>
   )
 }
 

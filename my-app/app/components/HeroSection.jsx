@@ -8,12 +8,12 @@ const HeroSection = () => {
             <div className='col-span-7 place-self-center text-center sm:text-left'>
                 <h1 className='text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold'>
                     <span className=''>
-                        Hello, I'm {" "}
+                        Hey there, I'm {" "}
                     </span>
-                    Claire
+                    Claire!
                 </h1>
                 <p className='text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl'>
-                    Fake paragraph
+                    I'm a software engineer, researcher, and STEM student who likes to solve meaningful problems with computers. 
                 </p>
                 <div>
                     <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-white hover:bg-slate-200 text-black'>

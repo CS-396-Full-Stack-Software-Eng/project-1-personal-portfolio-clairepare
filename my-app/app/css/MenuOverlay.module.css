@@ -1,0 +1,8 @@
+/* MenuOverlay.module.css */
+.overlayMenu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem; /* py-4 */
+    padding-bottom: 1rem; /* py-4 */
+    align-items: center;
+}

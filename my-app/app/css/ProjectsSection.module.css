@@ -1,0 +1,37 @@
+/* ProjectsSection.module.css */
+.section {
+    padding: 1.5rem 0; /* py-6 */
+}
+
+.heading {
+    text-align: center;
+    font-size: 2.5rem; /* text-4xl */
+    font-weight: bold; /* font-bold */
+    color: white;
+}
+
+.tagsContainer {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; /* gap-2 */
+    padding: 1.5rem 0; /* py-6 */
+}
+
+.projectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; /* gap-4 */
+}
+
+.projectWrap {
+    width: 100%;
+    max-width: 20rem; /* max-w-xs */
+    /* Adjust the width for xl screens */
+    @media (min-width: 1280px) {
+        width: 50%; /* xl:w-1/2 */
+    }
+}

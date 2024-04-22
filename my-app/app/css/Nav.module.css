@@ -1,0 +1,101 @@
+/* Nav.module.css */
+.navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: #121212;
+    opacity: 1; /* ensure full opacity */
+    padding: 10px 20px; /* Adjust as needed */
+}
+
+.navContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem; /* assuming p-8 is 2rem */
+    max-width: 960px; /* typical max-width for content */
+    margin: auto;
+}
+
+.logoLink {
+    font-size: 2rem; /* text-2xl */
+    color: white;
+    font-weight: 600; /* font-semibold */
+    text-decoration: none;
+}
+
+.mobileMenu {
+    display: block;
+}
+
+.menuItems {
+    display: none;
+    width: auto;
+}
+
+.menuItems.desktop {
+    display: block;
+}
+
+.menuList {
+    display: flex;
+    padding: 1rem 0;
+    margin: 0;
+    flex-direction: row;
+    gap: 2rem; /* space-x-8 */
+}
+
+.circle {
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+  border-radius: 50%;
+  background-color: #000; /* Circle color */
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navButton {
+    display: flex;
+    align-items: center;
+    color: #ADB7BE;
+    padding: 0.75rem;
+    border: 1px solid #ADB7BE;
+    border-radius: 0.375rem;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.navButton:hover {
+    color: white;
+    border-color: white;
+}
+
+.mobileMenu {
+    display: block; /* Visible on small screens */
+}
+
+@media (min-width: 768px) { /* Hide on medium and larger screens */
+    .mobileMenu {
+        display: none;
+    }
+}
+
+.menuItems {
+    display: none; /* Start hidden on smaller screens */
+}
+
+@media (min-width: 768px) { /* Show on medium and larger screens */
+    .menuItems {
+        display: block;
+        width: auto;
+    }
+}
+
+.icon {
+  font-size: 30px; /* Adjust as needed */
+  /* Additional styling for the icon if needed */
+}

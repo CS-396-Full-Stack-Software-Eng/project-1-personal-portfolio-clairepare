@@ -94,11 +94,11 @@ const AboutSection = () => {
         <section id="about" className='text-white '>
             <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 sl:px-16'>
                 <Image
-                    src="/../favicon.ico"
-                    alt='about-image'
-                    //className="absolute transform -translate-x-1/2 -translate-y-1/2 -top-1/2 -left-1/2"
-                    width={500}
-                    height={500}/>
+                        src="/headshot.jpg"
+                        alt="hero-image"
+                        //className="absolute transform -translate-x-1/2 -translate-y-1/2 -top-1/2 -left-1/2"
+                        width={300}
+                        height={300}/>
                 <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
                     <h2 className='text-4xl font-bold text-white mb-4'>About Me</h2>
                     <p className='text-base lg:text-lg'>

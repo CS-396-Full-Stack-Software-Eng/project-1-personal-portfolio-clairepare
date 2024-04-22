@@ -1,0 +1,116 @@
+/* HeroSection.module.css */
+.heroGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media screen and (min-width: 640px) { /* sm breakpoint */
+    .heroGrid {
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+.textContainer {
+    grid-column: span 7;
+    align-self: center;
+    text-align: center;
+}
+
+@media screen and (min-width: 640px) { /* sm breakpoint */
+    .textContainer {
+        text-align: left;
+    }
+}
+
+.heroHeading {
+    color: white;
+    margin-bottom: 1rem; /* mb-4 */
+    font-size: 2.5rem; /* text-4xl */
+    font-weight: 800; /* font-extrabold */
+}
+
+@media screen and (min-width: 640px) { /* sm breakpoint */
+    .heroHeading {
+        font-size: 3rem; /* text-5xl */
+    }
+}
+
+@media screen and (min-width: 1024px) { /* lg breakpoint */
+    .heroHeading {
+        font-size: 3.75rem; /* text-6xl */
+    }
+}
+
+.heroText {
+    color: #ADB7BE;
+    font-size: 1rem; /* text-base */
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+@media screen and (min-width: 640px) { /* sm breakpoint */
+    .heroText {
+        font-size: 1.125rem; /* text-lg */
+    }
+}
+
+@media screen and (min-width: 1024px) { /* lg breakpoint */
+    .heroText {
+        font-size: 1.25rem; /* text-xl */
+    }
+}
+
+.buttonPrimary {
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+    border-radius: 9999px;
+    background-color: white;
+    color: black;
+    margin-right: 1rem; /* mr-4 */
+    transition: background-color 0.3s;
+}
+
+.buttonPrimary:hover {
+    background-color: #E2E8F0; /* slate-200 */
+}
+
+.buttonSecondary {
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+    border-radius: 9999px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    margin-top: 0.75rem; /* mt-3 */
+    transition: background-color 0.3s;
+}
+
+.buttonSecondary:hover {
+    background-color: #1F2937; /* slate-800 */
+}
+
+.imageContainer {
+    grid-column: span 5;
+    align-self: center;
+    margin-top: 1rem; /* mt-4 */
+}
+
+@media screen and (min-width: 1024px) { /* lg breakpoint */
+    .imageContainer {
+        margin-top: 0;
+    }
+}
+
+.avatar {
+    border-radius: 9999px;
+    width: 250px;
+    height: 500px;
+    background-color: #181818;
+    position: relative;
+}
+
+@media screen and (min-width: 1024px) { /* lg breakpoint */
+    .avatar {
+        width: 400px;
+        height: 400px;
+    }
+}

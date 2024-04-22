@@ -1,0 +1,17 @@
+/* TabButton.module.css */
+.buttonText {
+    margin-right: 12px; /* assuming mr-3 translates to roughly 12px */
+    font-weight: 600; /* font-semibold */
+    color: var(--inactive-color);
+    border-bottom-width: 0;
+    transition: color 0.3s;
+}
+
+.buttonText.active {
+    color: white;
+    border-bottom: 2px solid var(--active-border-color);
+}
+
+.buttonText:hover {
+    color: white;
+}

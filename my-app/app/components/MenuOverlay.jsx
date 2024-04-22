@@ -1,17 +1,17 @@
-import React from 'react'
-import NavItem from './NavItem'
+import React from 'react';
+import NavItem from './NavItem';
+import styles from '../css/MenuOverlay.module.css'; // Import the CSS module
 
 const MenuOverlay = ({ links }) => {
   return (
-    <ul className='flex flex-col py-4 items-center'>
+    <ul className={styles.overlayMenu}>
         {links.map((link, index) => (
             <li key={index}>
-                <NavItem href={link.path}>{link.title}</NavItem>
+                <NavItem href={link.path} title={link.title} />
             </li>
-
         ))}
     </ul>
-  )
-}
+  );
+};
 
-export default MenuOverlay
+export default MenuOverlay;

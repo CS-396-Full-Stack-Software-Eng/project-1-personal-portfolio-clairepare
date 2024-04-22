@@ -2,6 +2,7 @@
 import React, {useState} from 'react'
 import ProjectCard from './ProjectCard'
 import ProjectTag from './ProjectTag'
+import styles from '../css/ProjectsSection.module.css'; // Import the CSS module
 
 const projectsData = [
     {
@@ -61,11 +62,11 @@ const ProjectsSection = () => {
     const filteredProjects = projectsData.filter((project) => project.tag.includes(tag));
 
   return (
-    <section id="projects" className="py-6">
-        <h2 className="text-center text-4xl font-bold text-white">
-            My Projects
-        </h2>
-        <dib className="text-white flex flex-row justify-center items-center gap-2 py-6">
+    <section id="projects" className={styles.section}>
+            <h2 className={styles.heading}>
+                My Projects
+            </h2>
+            <div className={styles.tagsContainer}>
             <ProjectTag 
                 onClick={handleTagChange} 
                 name="All" 
@@ -78,10 +79,10 @@ const ProjectsSection = () => {
                 onClick={handleTagChange} 
                 name="Mobile" 
                 isSelected={tag === "Mobile"}/>
-        </dib>
-        <div className="flex flex-wrap justify-center gap-4">
+        </div>
+        <div className={styles.projectsContainer}>
             {filteredProjects.map(
-            (project) => <div key={project.id} className="w-full xl:w-1/2 max-w-xs">
+            (project) => <div key={project.id} className={styles.projectWrap}>
                 <ProjectCard
                                 key={project.id}
                                 title={project.title}
@@ -96,4 +97,4 @@ const ProjectsSection = () => {
   )
 }
 
-export default ProjectsSection
+export default ProjectsSection;

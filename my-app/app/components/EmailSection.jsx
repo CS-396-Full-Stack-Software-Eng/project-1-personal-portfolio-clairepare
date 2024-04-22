@@ -4,6 +4,8 @@ import React, {useState} from 'react'
 // import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from 'next/link';
 import Image from 'next/image';
+import { FaGithub } from "react-icons/fa";
+import { RxLinkedinLogo } from "react-icons/rx";
 
 const EmailSection = () => {
 
@@ -47,12 +49,12 @@ const EmailSection = () => {
                 {" "}
                 Feel free to reach out about anything!
             </p>
-            <div className="socials flex flex-row gap-2">
-                <Link href="github.com">
-                    <Image src={'/../favicon.ico'} alt="Github Icon" width={300} height={300}/>
+            <div className="socials flex flex-row gap-2 mb-4">
+                <Link href="https://github.com/clairepare">
+                    <FaGithub width={600} height={600}/>
                 </Link>
-                <Link href="linkedin.com">
-                    <Image src={'/../favicon.ico'} alt="Linkedin Icon" width={300} height={300}/>
+                <Link href="https://www.linkedin.com/in/claire-par%C3%A9-256b2a20a/">
+                    <RxLinkedinLogo width={600} height={600} />
                 </Link>
             </div>
             <div>

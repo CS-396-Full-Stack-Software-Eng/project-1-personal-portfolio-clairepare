@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+section {
+  scroll-margin-top: 80px;  /* Adjust this value based on your header's height */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,4 +28,21 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+:root {
+    --border-color: #33353F; /* default to dark theme */
+    --text-color: #FFF; /* default to dark theme */
+    --secondary-text-color: #aaa; /* lighter text for dark theme */
+    --inactive-color: #ADB7BE; /* Placeholder color for inactive state */
+    --active-border-color: #805ad5; /* Assuming purple-500 */
+    --inactive-color: #ADB7BE;
+    --border-slate: #708090; /* Slate gray - replace with your exact color if different */
+    --border-purple: #6b46c1; /* Purple 500 - replace with your exact color if different */
+}
+
+[data-theme="light"] {
+    --border-color: #DDD; /* lighter border for light theme */
+    --text-color: #333; /* darker text for light theme */
+    --secondary-text-color: #666; /* darker secondary text for light theme */
 }

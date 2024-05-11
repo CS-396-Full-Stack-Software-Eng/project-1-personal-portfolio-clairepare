@@ -1,0 +1,37 @@
+/* Footer.module.css */
+.footer {
+    border-top: 1px solid var(--border-color);
+    border-left: transparent;
+    border-right: transparent;
+    color: var(--text-color);
+}
+
+.container {
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    /* Additional styling for the logo can go here */
+}
+
+.thanksText {
+    color: var(--secondary-text-color);
+}
+
+.circle {
+  width: 25px; /* Adjust as needed */
+  height: 25px; /* Adjust as needed */
+  border-radius: 50%;
+  background-color: #000; /* Circle color */
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  font-size: 15px; /* Adjust as needed */
+  /* Additional styling for the icon if needed */
+}

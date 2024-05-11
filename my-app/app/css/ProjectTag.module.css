@@ -1,0 +1,23 @@
+/* ProjectTag.module.css */
+.tagButton {
+    border-width: 2px;
+    padding: 6px 24px; /* Converted px-6 to actual px */
+    font-size: 1.25rem; /* Equivalent to text-xl */
+    cursor: pointer;
+    border-radius: 9999px; /* Equivalent to rounded-full */
+    transition: border-color 0.3s;
+}
+
+.tagButton.default {
+    color: var(--inactive-color); /* #ADB7BE from your global styles */
+    border-color: var(--border-slate); /* Assuming var(--border-slate) is defined globally */
+}
+
+.tagButton.default:hover {
+    border-color: white;
+}
+
+.tagButton.selected {
+    color: white;
+    border-color: var(--border-purple); /* Assuming var(--border-purple) is defined globally */
+}

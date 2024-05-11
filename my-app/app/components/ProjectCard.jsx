@@ -11,35 +11,18 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
 
     return (
         <div className={styles.cardContainer}>
-            <div
-                className={styles.imageContainer}
-                style={{ backgroundImage: `url(${imgUrl})`, backgroundSize: 'cover' }}
-            />
-            <div className={styles.content}>
-                <h5 className={styles.title}>{title}</h5>
-                <div className={`${styles.description} ${!showFullDescription ? 'hidden md:block' : ''}`}>
-                    {description}
+            <Link href={gitUrl}>
+                <div
+                    className={styles.imageContainer}
+                    style={{ backgroundImage: `url(${imgUrl})`, backgroundSize: 'cover' }}
+                />
+                <div className={styles.content}>
+                    <h5 className={styles.title}>{title}</h5>
+                    <div className={`${styles.description} ${!showFullDescription ? 'hidden md:block' : ''}`}>
+                        {description}
+                    </div>
                 </div>
-                <button className={styles.readMoreButton} onClick={toggleDescription}>
-                    {showFullDescription ? 'Show Less' : 'Read More'}
-                </button>
-            </div>
-            <div className={`${styles.overlay} ${showFullDescription ? styles.overlayVisible : ''}`}>
-                <Link href={gitUrl}>
-                    <span className={styles.linkButton}>
-                        <span className={styles.linkIcon}>Github</span>
-                    </span>
-                </Link>
-                <Link href={previewUrl}>
-                    <span className={styles.linkButton}>
-                        <span className={styles.linkIcon}>Preview</span>
-                    </span>
-                </Link>
-            </div>
-            <div className={styles.bottomContent}>
-                <h5 className={styles.title}>{title}</h5>
-                <p className={styles.description}>{description}</p>
-            </div>
+            </Link>
         </div>
     );
 };

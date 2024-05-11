@@ -80,7 +80,7 @@ const TAB_DATA = [
 ]
 
 
-const AboutSection = () => {
+const AboutPage = () => {
     const [tab, setTab] = useState("languages");
     const [isPending, startTransition] = useTransition();
 
@@ -129,4 +129,4 @@ const AboutSection = () => {
     )
 }
 
-export default AboutSection;
+export default AboutPage;

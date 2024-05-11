@@ -7,10 +7,10 @@ import styles from '../css/Nav.module.css'; // Import the CSS module
 import { GiPear } from "react-icons/gi";
 
 const navLinks = [
-    { title: "About", path: "#about" },
-    { title: "Projects", path: "#projects" },
-    { title: "Contact", path: "#contact" },
-    { title: "Resume", path: "#resume" }
+    { title: "About", path: "/about" },
+    { title: "Projects", path: "/projects" },
+    { title: "Contact", path: "/email" },
+    { title: "Resume", path: "/resume" }
 ];
 
 const Nav = () => {

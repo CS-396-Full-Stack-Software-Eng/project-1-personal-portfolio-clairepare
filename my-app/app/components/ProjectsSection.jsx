@@ -11,7 +11,7 @@ const projectsData = [
         description: "Surveyed the campus community to highlight a need that students on campus actually face. Created Wildcat Connect which centralized event information for campus organizations, as there was no up-to-date hub where organizations can post and manage events for the community to see. Integrated GitHub for version control, enhancing team collaboration. Applied Vitest and Cypress for comprehensive testing, ensuring application reliability. Adopted continuous integration for improved development efficiency.",
         image: "/images/projects/1.png",
         tag: ["All", "Web"],
-        gitUrl: "/",
+        gitUrl: "https://github.com/clairepare/WildcatCentral",
         previewUrl: "/"
     },
     {
@@ -20,7 +20,7 @@ const projectsData = [
         description: "A collaboration with NU Campus Kitchens, a group dedicated to reclaiming dining hall food waste and distributing to the Evanston community, on creating an app managing their internal database. NU Fridge was born, seamlessly tracking the inventory from each dining hall, variables like expiration and quantity, and notifying which food to package next. Provided dynamic analytics related to pounds of food, meals served, and other preferred metrics.",
         image: "/images/projects/2.png",
         tag: ["All", "Web"],
-        gitUrl: "/",
+        gitUrl: "https://github.com/clairepare/NUCampusFridge",
         previewUrl: "/"
     },
     {
@@ -29,7 +29,7 @@ const projectsData = [
         description: "Designed and implemented FitNU: an app designed to seamlessly connect the NU community with like-minded individuals who want to exercise together. Spearheaded full-stack development of campus applications using React, Node.js, and Firebase, focusing on enhancing campus engagement. Implemented Agile and Swarm methodologies for efficient 3-week sprint cycles Interchanged swarm cycles with comprehensive user testing, crafting detailed testing materials, task scenarios, and showing the app to gym-goers all around campus.",
         image: "/images/projects/3.png",
         tag: ["All", "Web"],
-        gitUrl: "/",
+        gitUrl: "https://github.com/clairepare/FitNU",
         previewUrl: "/"
     },
     {
@@ -38,16 +38,7 @@ const projectsData = [
         description: "Bubbles is an innovative web application that streamlines the laundry process through advanced image recognition technology. Developed using React for a responsive front-end and powered by Firebase for real-time data handling and authentication, Bubbles offers a user-friendly interface that takes the guesswork out of laundry care. By leveraging state-of-the-art object detection algorithms, Bubbles identifies multiple laundry symbols in a single scan, decoding complex care instructions with ease. Users simply upload a photo of the care label on their garments, and the app provides a clear, concise summary of the washing, drying, ironing, and bleaching guidelines recommended by the manufacturer.",
         image: "/images/projects/4.png",
         tag: ["All", "Web"],
-        gitUrl: "/",
-        previewUrl: "/"
-    },
-    {
-        id: 5,
-        title: "Project 5",
-        description: "Project 5 Description",
-        image: "/images/projects/5.png",
-        tag: ["All", "Web"],
-        gitUrl: "/",
+        gitUrl: "https://github.com/clairepare/Bubbles",
         previewUrl: "/"
     }
 ]
@@ -67,7 +58,7 @@ const ProjectsSection = () => {
                 My Projects
             </h2>
             <div className={styles.tagsContainer}>
-            <ProjectTag 
+            {/* <ProjectTag 
                 onClick={handleTagChange} 
                 name="All" 
                 isSelected={tag === "All"}/>
@@ -78,7 +69,7 @@ const ProjectsSection = () => {
             <ProjectTag 
                 onClick={handleTagChange} 
                 name="Mobile" 
-                isSelected={tag === "Mobile"}/>
+                isSelected={tag === "Mobile"}/> */}
         </div>
         <div className={styles.projectsContainer}>
             {filteredProjects.map(
